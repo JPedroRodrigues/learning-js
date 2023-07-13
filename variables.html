@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <h1>Observando o Comportamento de Variáveis</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni molestiae ea omnis molestias. Ut nesciunt atque harum architecto repellat expedita numquam porro. Non omnis dolorum, iure quis dolores suscipit officiis.</p>
+    <script>
+        var a;
+        //console.log(a);
+        var b = 2;
+
+        a = 7;
+        b = a;
+        console.log(a);
+        //window.alert('Olá, mundo!');
+        //window.confirm('Está gostando de JS?');
+        //window.prompt('Me diga seus dados pessoais.')
+
+        var strng = "Firsta line\n\t\\SecondLine\nThirdLine";
+        console.log(strng);
+
+        var nome = window.prompt("Qual é o seu noem?");
+
+        document.write(`Seu nome é ${nome} e ele possui ${nome.length} letras. Legal!<br>`);
+
+        var v = [["João", 20], ["Carlos", 15]];
+        v.pop();
+        document.write(`Meu array: ${v}`);
+
+        function ola_mundo() {
+            console.log("Olá, mundo!");
+        }
+
+        ola_mundo();
+    </script>
+</body>
+</html>

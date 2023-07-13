@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Teste</title>
+    <style>
+        body {
+           background-color: mediumseagreen;
+           color: white;
+           font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boa noite a todos!</h1>
+    <p>
+        Venho visitá-los, por meio deste termo, para negociar...
+    </p>
+    <script>
+        var produto = window.prompt('Me diga o nome do produto de que está interessado:')
+        var preço = Number(window.prompt('Preço deste produto:'))
+        var produto2 = window.prompt('Outro nome de um produto:')
+        var preço2 = Number(window.prompt('Preço deste novo produto:'))
+        document.writeln(`Primeiro produto: <strong>${produto.toLowerCase()}</strong></br>`)
+        document.writeln(`Preço: ${preço.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</br>`)
+        document.writeln(`Segundo produto: <strong>${produto2.toLowerCase()}</strong></br>`)
+        document.writeln(`Preço: ${preço2.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body {
+            background-color: slategrey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            background-color: white;
+
+            height: auto;
+            width: 450px;
+
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        div#botao {
+            background-color: rgb(139, 179, 220);
+
+            height: auto;
+            width: 200px;
+            border-radius: 5px;
+            padding-top: 1px;
+            padding-right: 10px;
+            padding-bottom: 1px;
+            padding-left: 10px;
+
+            margin: auto;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        div#botao > p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Iniciando estudos DOM</h1>
+        <p>DOM, DOM, DOM, DOM<br>DOM, DOM, DOM<br>Eu tava aqui no baile escutando aquele som</p>
+        <p>Agora vai. Estou aprendendo a usar o <strong>DOM</strong>.</p>
+
+        <div id="botao">
+            <p>Onde canta os passarinhos</p>
+        </div>
+
+        <script>
+            var corpo = window.document.body;
+            //corpo.style.background = 'black';
+            var p1 = window.document.getElementsByTagName('p')[0];
+
+            /*
+            window.document.write(p1.innerText);
+            //p1.style.color = 'blue';
+
+            var p2 = window.document.getElementsByTagName('p')[1];
+            window.document.write(p2.innerText);
+
+            var d = window.document.getElementById('botao');
+            var p = d.getElementsByTagName('p')[0];
+            d.style.background = 'green';
+            p.innerText = 'Fala meus queridos...';
+            */
+            /*
+            var d = window.document.querySelector('div#botao');
+            var p0 = window.document.querySelector('div#botao > p');
+
+            d.style.background = 'black';
+            p0.innerText = 'DOOM';
+            */
+        </script>
+    </main>
+</body>
+</html>

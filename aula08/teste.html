@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando os operadores</title>
+    <style>
+        body {
+            background-color: mediumseagreen;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Bom dia, me informe o seu nome:')
+        var idade = Number(window.prompt('Agora a sua idade:'))
+        var sal = Number(window.prompt('Se importa em me dizer o seu saláro?'))
+        var maioridade = idade >= 18 ? 'maior': 'menor'
+        var real = sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        var riqueza = sal >= 1500 ? 'Uau! você recebe muito dinheiro!' : 'Hmmm'
+        document.write(`<h1>Seja bem vindo, ${nome.toUpperCase()}!</h1></br>`)
+        document.write(`<p> Vejo que você é <strong>${maioridade}</strong> de idade.</br>`)
+            document.write(`Seu salário é de <strong>${real}</strong>. ${riqueza}</p>`)
+    </script>
+    <script>
+        var v1 = Number(window.prompt(''))
+    </script>
+</body>
+</html>
