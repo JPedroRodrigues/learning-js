@@ -1,13 +1,18 @@
-var  button = document.querySelector('input#button');
+let button = document.querySelector('input#button');
 button.addEventListener('click', iteracao);
 
 function iteracao() {
-    var inicio = window.document.querySelector('input#inicio');
-    var fim = document.querySelector('input#fim');
-    var passo = document.querySelector('input#passo');
+    let inicio = window.document.querySelector('input#inicio');
+    let fim = document.querySelector('input#fim');
+    let passo = document.querySelector('input#passo');
 
-    if (passo.value.length == 0) {
-        window.alert('A informação "passo" precisa ser inserida.')
+    if (passo.value.length == 0 || inicio.value.length == 0 || fim.value.length == 0) {
+        window.alert('Todos os campos precisam ser preenchidos com um número.')
+        return;
+    }
+
+    if (Number(passo.value) <= 0) {
+        window.alert('O passo precisa ser um número maior ou igual a 1.')
         return;
     }
 
@@ -15,22 +20,19 @@ function iteracao() {
     fim = Number(fim.value);
     passo = Number(passo.value);
 
-    if (inicio > fim) {
-        window.alert('O início não pode ser maior do que o fim.')
-        return;
-    }
+    let res = document.querySelector('div#result > p');
+    res.innerHTML = 'Contanto:<br>';
 
-    if (inicio < fim && passo <= 0) {
-        window.alert('O passo precisa ser um número maior ou igual a 1.')
-        return;
-    }
-
-    var res = document.querySelector('div#result > p');
-
-    res.innerHTML = '';
-
-    for (var c = inicio; c <= fim; c += passo) {
-        res.innerHTML += `${c} &#x1F449 `;
+    if (inicio < fim) {
+        //Contagem crescente
+        for (let c = inicio; c <= fim; c += passo) {
+            res.innerHTML += `${c} &#x1F449 `;
+        }
+    } else {
+        // Contagem decrescente
+        for (let c = inicio; c >= fim; c -= passo) {
+            res.innerHTML += `${c} &#x1F449 `;
+        }
     }
     res.innerHTML += ` &#x1F3C1`;
 }   
