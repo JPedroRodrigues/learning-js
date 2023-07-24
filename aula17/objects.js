@@ -10,4 +10,5 @@ let amigo = {
 };
 
 amigo.engordar(2);
+
 console.log(`Esse cara, o ${amigo.nome}, pesa ${amigo.peso}Kg`);
